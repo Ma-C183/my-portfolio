@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Auma Mercy | Portfolio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Google Fonts: Newsreader & Manrope -->
+   
+    <style>
+        :root {
+            --bs-primary: dark;
+            --bs-primary-rgb: 0, 71, 255;
+            --surface: #f8f9fa;
+            --on-surface: #191c1d;
+            --on-surface-variant: #434657;
+            --outline-variant: gold;
+            --surface-container-low: #f3f4f5;
+            --surface-container-lowest: #ffffff;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: darkblue;
+            color: var(--on-surface);
+            overflow-x: hidden;
+        }
+
+        .font-headline {
+            font-family: 'Newsreader', serif;
+        }
+
+        .font-body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .font-label {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .text-display-lg {
+            font-family: 'Newsreader';
+            font-size: clamp(3rem, 8vw, 5rem);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .text-headline-lg {
+            font-family: 'Newsreader';
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.2;
+        }
+
+        .glass-nav {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(135deg, #0035c5 0%, #0047ff 100%);
+            border: none;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .btn-primary-custom:hover {
+            opacity: 0.9;
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .btn-primary-custom:active {
+            transform: scale(0.95);
+        }
+
+        .nav-link-custom {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #474646;
+            transition: color 0.3s;
+        }
+
+        .nav-link-custom:hover {
+            color: var(--on-surface);
+        }
+
+        .nav-link-custom.active {
+            color: var(--bs-primary);
+            border-bottom: 2px solid var(--bs-primary);
+        }
+
+        .project-card img {
+            transition: transform 0.7s ease;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .service-row {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .service-row:hover {
+            background-color: dark;
+        }
+
+        .material-symbols-outlined {
+            vertical-align: middle;
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .form-control-custom {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--outline-variant);
+            border-radius: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .form-control-custom:focus {
+            background: transparent;
+            box-shadow: none;
+            border-color: var(--bs-primary);
+        }
+
+        .grayscale-hover {
+            filter: grayscale(100%);
+            transition: filter 0.7s ease;
+        }
+
+        .grayscale-hover:hover {
+            filter: grayscale(0%);
+        }
+
+        .label-xs {
+            font-size: 0.65rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TopNavBar -->
+    <header class="fixed-top glass-nav">
+        <nav class="navbar navbar-expand-md py-3">
+            <div class="container-xl">
+                <a class="navbar-brand font-headline fw-bold fs-4 tracking-tight" href="#">Auma Mercy</a>
+                <button class="navbar-toggler border-0 shadow-none" data-bs-target="#navbarNav"
+                    data-bs-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto gap-lg-4">
+                        <li class="nav-item"><a class="nav-link nav-link-custom active" href="#work">Work</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="#contact">Contact</a></li>
+                    </ul>
+                    <a class="btn btn-primary-custom d-none d-md-inline-block" href="#contact">Let's Talk</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+<section class="min-vh-100 d-flex align-items-center bg-dark text-white text-center">
+  <div class="container">
+
+    <!-- Profile Image -->
+    <img src="passpp.jpg" 
+         class="rounded-circle img-fluid shadow mb-4" 
+         alt="My Photo" 
+         width="150">
+
+    <!-- Availability -->
+    <p class="text-muted small mb-2">
+      Based in Lira — Available for Work
+    </p>
+
+    <!-- Name (Add your name here) -->
+    <h1 class="fw-bold mb-3">
+      Mercy Auma
+    </h1>
+
+    <!-- Roles -->
+    <div class="d-flex justify-content-center gap-3 flex-wrap fw-semibold">
+      <span>IT Specialist</span>
+      <span class="text-secondary">|</span>
+      <span>Entrepreneur</span>
+      <span class="text-secondary">|</span>
+      <span>Finance Enthusiast</span>
+    </div>
+ <!-- Call to Action Button -->
+    <a href="#about" class="btn btn-light text-dark mt-3 px-4 py-2 fw-bold">
+      View My Work
+    </a>
+  </div>
+</section>
+
+<!-- About & Education Section -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+
+        <!-- Who Am I -->
+        <h2 class="fw-bold mb-3">Who Am I</h2>
+        <p class="mb-3 fs-5 text-dark">
+          I am a motivated and versatile professional with a strong background in Information Technology and Finance. 
+          I specialize in web design, computer networking, and business development, combining technical skills with practical 
+          problem-solving to create efficient and user-friendly solutions.
+        </p>
+        <p class="mb-4 fs-5 text-dark">
+          I am passionate about using technology to improve businesses, support digital growth, and create opportunities in today's fast-changing world.
+        </p>
+
+        <!-- Education -->
+        <h3 class="fw-bold mb-3">Education</h3>
+        <p class="mb-0 fw-semibold"> BAF | BIT | CISCO</p>
+      </div>
+    </div>
+  </div>
+</section>
+                   <!-- Services Section -->
+<section class="py-5 bg-dark text-warning" id="services">
+  <div class="container">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-5">
+      
+      <h2 class="text-white fw-bold">What I Do</h2>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="row g-4">
+
+      <!-- Web Design -->
+      <div class="col-md-4 text-center">
+        <img src="web-design.png" alt="Web Design" class="img-fluid mb-3" width="100">
+        <h4 class="text-white fw-bold">Web Designer</h4>
+        <p class="fs-5 text-warning">
+          I design and develop responsive, user-friendly websites that meet modern standards. 
+          My focus is on both functionality and visual appeal.
+        </p>
+      </div>
+
+      <!-- Computer Networking -->
+      <div class="col-md-4 text-center">
+        <img src="networking.jpg" alt="Computer Networking" class="img-fluid mb-3" width="100">
+        <h4 class="text-white fw-bold">Computer Networking</h4>
+        <p class="fs-5 text-warning">
+          Practical knowledge in setting up and managing computer networks to ensure smooth communication and connectivity.
+        </p>
+      </div>
+
+      <!-- Business & Entrepreneurship -->
+      <div class="col-md-4 text-center">
+        <img src="business.png" alt="Business & Entrepreneurship" class="img-fluid mb-3" width="100">
+        <h4 class="text-white fw-bold">Business & Entrepreneurship</h4>
+        <p class="fs-5 text-warning">
+          I combine IT knowledge with business skills to support growth and sustainability.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+                    <!-- Contact Section -->
+<section class="py-5 bg-dark text-white" id="contact">
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- Contact Info -->
+      <div class="col-lg-5">
+        <h3 class="fw-bold fst-italic mb-4 display-6">Let's Connect</h3>
+        <p class="fs-5 mb-5 text-light">I'm currently accepting new projects and collaborations for 2026.</p>
+
+        <!-- Email -->
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <div class="rounded-circle border border-primary d-flex align-items-center justify-content-center" 
+               style="width:48px; height:48px;">
+            <span class="material-symbols-outlined text-primary">mail</span>
+          </div>
+          <span class="fs-6 text-light">lynntrea@gmail.com</span>
+        </div>
+
+        <!-- Location -->
+        <div class="d-flex align-items-center gap-3">
+          <div class="rounded-circle border border-primary d-flex align-items-center justify-content-center" 
+               style="width:48px; height:48px;">
+            <span class="material-symbols-outlined text-primary">location_on</span>
+          </div>
+          <span class="fs-6 text-light">Kakoge, Lira City West Division</span>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-6 offset-lg-1">
+        <div class="p-5 bg-light rounded-4 shadow">
+          <form>
+            <div class="row g-4 mb-4">
+              <div class="col-md-6">
+                <label class="form-label fw-semibold mb-2">Your Name</label>
+                <input type="text" class="form-control" placeholder="John Doe">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold mb-2">Email Address</label>
+                <input type="email" class="form-control" placeholder="john@example.com">
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-semibold mb-2">How can I help?</label>
+              <textarea class="form-control" placeholder="Tell me about your project..." rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 py-3 d-flex align-items-center justify-content-center gap-2">
+              Send Message
+              <span class="material-symbols-outlined fs-6">send</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-5 bg-light border-top border-secondary">
+  <div class="container-xl">
+    <div class="row align-items-center g-4">
+
+      <!-- Portfolio Name -->
+      <div class="col-md-3 text-center text-md-start">
+        <div class="fw-bold fst-italic fs-5">MY PORTFOLIO</div>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-6 text-center">
+        <div class="d-flex justify-content-center gap-3">
+          <a href="#"><img src="twitter.png" width="40" alt="Twitter"></a>
+          <a href="#"><img src="facebook.webp" width="40" alt="Facebook"></a>
+          <a href="#"><img src="Instagram.png" width="40" alt="Instagram"></a>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="col-md-3 text-center text-md-end">
+        <div class="text-muted small">© 2026 Auma Mercy</div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
